@@ -8,10 +8,10 @@ def palindrome_center(c):
                 else:
                     break
     else:
-        for i in range (1,len(c)-1):
-            for j in range(1,len(c)):
-                if i-j>-1 and i+j<len(c) and c[i-j]==c[-(i-j+1)]:
-                    p[i]=j
+        for i in range (len(c)):
+            for j in range(1,int(len(c)/2),1):
+                if i-j>-1 and i+j<len(c) and c[i]==c[i-1]:
+                    p[i-1]=j
                 else:
                     break
     print(p)
@@ -44,12 +44,12 @@ def create_palindrome(x):
         continue
     return palindrome
 
-def frange(sta,sto,jmp):
-    v=[]
-    while sta<sto:
-        v.append(sta)
-        sta+=jmp
-    return v
+# def frange(sta,sto,jmp):
+#     v=[]
+#     while sta<sto:
+#         v.append(sta)
+#         sta+=jmp
+#     return v
 
 
 create_palindrome(input("enter string: "))
