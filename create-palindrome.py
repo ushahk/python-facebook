@@ -11,7 +11,7 @@ def palindrome_center(c):
         for i in range (len(c)):
             for j in range(1,int(len(c)/2),1):
                 if i-j>-1 and i+j<len(c) and c[i]==c[i-1]:
-                    p[i-1]=j
+                    p[i]=j
                 else:
                     break
     print(p)
@@ -21,7 +21,7 @@ def palindrome_center(c):
 def marker_palindrome(x):
     meta_dict=palindrome_center(x)
     ld=len(meta_dict)
-    if ld%2!=0:
+    if ld%2!=0: 
         center=int(ld/2)+1
     else:
         center=ld/2
