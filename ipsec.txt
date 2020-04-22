@@ -1,0 +1,36 @@
+Ipsec:
+authentication
+integrity
+confidentiality
+replay (anti)
+
+PHASE1:(control plane)
+AUTH           psk(keys) or pki(cert), ikev2 EAP methods(flex vpn)
+DIFFIE hellman group (Exchange keys) alice bob private public, group number entropy how long - result symmetric keys
+Encryption -   could be hardware offloaded, aes128, 192, 256, ikev2 suiteb beyond aes256
+Hashing-      sha or md5, to make sure packet is not modified. sha-1, sha256,384
+
+Isakmp SA ^^ negotiated  - phase 1 initiator and responder checks aginst its parameter for match
+ISAKMP uses UDP 500 with NAT UDP 4500
+
+phase 2 (data plane)
+
+1)security protocol -ESP & AH
+  ESP - protocol 50 AICR,
+  AH-51 - no Encryption AI only, ipv6 ospfv3 neighbor authentication
+  IF NAT then ESP over UDP 4500
+
+2)Encapsulation mode: Tunnel or transport
+  Tunnel: original ip header retained, Layer4 and payload encrypted with ESP
+          complete packet authenticated with AH, used in host to host Ipsec
+  Transport: Adds new ip header, original ipv4 header,payload auth and encrypted with ESP
+              complete packet authenticated with AH, used between IPsec gateways and host to IPsec gateways
+
+3)Encryption: 3DES, AES,
+
+4)Authentication: MD5, SHA, 256, 512
+
+5)Proxy identities: proxy acls for interesting traffic for protection.
+6) SA lifetimes: How often should we re-key, Lifetime can be in bits or time, lower is chosen.
+7) Perfect forward secrecy (PFS): When we re-key should we also re-negotiate diffie helman before re-keying (CPU intensive)
+8)
