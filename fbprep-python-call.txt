@@ -5,7 +5,9 @@ Important topics for python interview:
 3)dict methods
 4)loops
 5)data types
-6)
+6)Python classes (with inheritance)
+7) Sets
+8) CSV parsing
 
 Expected interview questions:
 ----------------------------
