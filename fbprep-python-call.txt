@@ -1,0 +1,15 @@
+Important topics for python interview:
+--------------------------------------
+1)Regex
+2)list methods
+3)dict methods
+4)loops
+5)data types
+6)
+
+Expected interview questions:
+----------------------------
+1) parse the file and figure out data. Example highest interface.
+2)
+3)
+4)
