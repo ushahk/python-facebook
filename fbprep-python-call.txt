@@ -10,6 +10,9 @@ Important topics for python interview:
 Expected interview questions:
 ----------------------------
 1) parse the file and figure out data. Example highest interface.
-2)
-3)
-4)
+2) Goat latin dictionary
+3) dinosaur questions
+4) palindrome, arrange vowel and then consonant and given string, Regex
+5) difference between list and set, what is dictionary
+6) Questions on database maintenance
+7) A database question, The interviewer asked how I would store posts and queries in a system.
